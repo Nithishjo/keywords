@@ -1,0 +1,8 @@
+private void fetch_brand()
+        {
+            DataTable dt = dbfunction.getTable("select brand from uno123"); // select brand from uno123 this is sql code change your sql code which table you wan't show in combo box you will use
+            cmb_brand.DataSource = dt; // cmb_brand=change your combox name
+            cmb_brand.DisplayMember = "brand";
+            cmb_brand.ValueMember = "brand";
+            cmb_brand.SelectedIndex = -1;
+        }
