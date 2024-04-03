@@ -1,0 +1,24 @@
+ int a = cmb_brand.SelectedIndex;
+
+                try
+                {
+                    string sss = cmb_brand.SelectedValue.ToString();
+                    if (!string.IsNullOrEmpty(cmb_brand.SelectedValue.ToString()) && a != -1)
+                    {
+                        for (int i = 0; i <= a; i++)
+                        {
+                            if (cmb_brand.SelectedIndex == i) // cmb_brand=changem your combobox name
+                            {
+                                string s = dataGridView1.Rows[i].Cells[1].Value.ToString();
+                                textuno1.Text = s;  // change user textuno1== textbox name
+                                string s1 = dataGridView1.Rows[i].Cells[3].Value.ToString(); // second text box
+                                textuno2.Text = s1; // second text box
+                            }
+                        }
+                    }
+
+                }
+                catch
+                {
+                    textuno1.Text = "";
+                }
