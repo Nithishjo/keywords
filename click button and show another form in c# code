@@ -1,0 +1,8 @@
+try
+            {
+                lastr_form ob = new lastr_form(); // lastr_form = change your form name
+                DialogResult s = ob.ShowDialog();
+                DataTable dt = dbfunction.getTable("SELECT TOP 1 Cus_ID, Cus_Name FROM last123 ORDER BY Cus_ID DESC"); // this sql change youe sql column name last123 = change your sqltable name
+                cmb_name.Text = dt.Rows[0]["Cus_Name"].ToString();// cmb_name=this will be use in name is show in details
+            }
+            catch { }  
