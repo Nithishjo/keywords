@@ -1,0 +1,7 @@
+private void display()
+{
+    string LSql = " Select  NO as ID,name as [Customer Name],PLACE as PLACE from JOYCEYTABLE"; // you want to chang your sql table column ex id as ia,name as name that is your column names and JOYCEYTABLE=change your sql table name
+    DataTable dt = dbfunction.getTable(LSql);
+    dataGridView1.DataSource = dt;
+   dataGridView1.Columns["ID"].Visible = true;
+}
